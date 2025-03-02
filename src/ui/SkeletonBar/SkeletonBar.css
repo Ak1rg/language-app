@@ -1,0 +1,21 @@
+@keyframes shine {
+    0% {
+        background-position: -20% 0;
+    }
+    100% {
+        background-position: 120% 0;
+    }
+}
+
+.gradient-wave {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0), 
+        rgba(255, 255, 255, 0.1),  
+        rgba(255, 255, 255, 0)   
+    );
+    background-size: 50px 100%;  
+    animation: shine 2s ease-in-out infinite; 
+    background-repeat: no-repeat;  
+    position: relative;  
+}

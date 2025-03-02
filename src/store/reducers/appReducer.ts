@@ -1,11 +1,13 @@
 import { IAppState } from '@/types/appType'
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 
 const initialState: IAppState = {
-    theme:'white',
+    sideBarWide:true,
+    theme:'black',
     routes:{
-        home:'/own/',
+        lists:'/app/lists/',
+        words:'/app/words/',
     }
 }
 
@@ -13,9 +15,12 @@ export const appSlice = createSlice({
     name: 'app',
     initialState,
     reducers: {
+        changeSideBarWide(state,action:PayloadAction<boolean>) {
+            state.sideBarWide = action.payload
+        }
     },
 })
 
-// export const { } = appSlice.actions
+export const { changeSideBarWide } = appSlice.actions
 
 export default appSlice.reducer

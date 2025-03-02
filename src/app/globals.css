@@ -11,3 +11,13 @@ nextjs-portal {
     padding: 0;
     box-sizing: border-box;
 }
+
+@layer utilities {
+    .scrollbar-hidden {
+        scrollbar-width: none; 
+        -ms-overflow-style: none;
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none; 
+    }
+}

@@ -1,8 +1,10 @@
 export interface IAppState {
+    sideBarWide:boolean
     theme:string
     routes:IRoutes
 }
 
 interface IRoutes {
-    home:string
+    lists:string
+    words:string
 }
